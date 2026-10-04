@@ -17,7 +17,7 @@ claude mcp add automan --scope user -e PYTHONPATH=<仓库目录> ^
     -- <仓库目录>/.venv/Scripts/python.exe -m automan mcp --ws D:/办公/工作区
 ```
 
-路径建议写正斜杠：在 Git Bash 这类 shell 里，反斜杠会被当成转义吞掉，记进配置的就成了 `C:UsersAdministrator…`，
+路径建议写正斜杠：在 Git Bash 这类 shell 里，反斜杠会被当成转义吞掉，记进配置的路径里一个反斜杠都不剩（`C:Users…`），
 服务端起不来（2026-10-04 实际撞上过）。加好之后 `claude mcp get automan` 应显示 Connected。
 
 **便携版**：
