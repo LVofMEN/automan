@@ -123,6 +123,11 @@ M4⑤ 盲标要求），有禁引测试。
 
 握手时 Claude Code 协商的是 2025-11-25，声明了 `elicitation: {form, url}`。
 
+**截图（2026-10-05，交互式 Claude Code）**：`docs/img/mcp_confirm.png` 是确认框，`docs/img/mcp_refused.png`
+是取消之后调用方的回复（"不会自己去确认，也不会换别的方式绕过它删除"）。截图时发现 Claude Code 只摊开说明的头两三行、
+其余折成"… (+5 more lines)"，而原先的说明第一行是套话、要做什么在第三行，判据和快照位置全被折掉 ——
+改成三行、第一行就是要做什么（测试守着"要做什么在第一行、不超过三行"）。
+
 **便携版**：`release/build.py` 的自检新增一步，裸写 JSON-RPC 对 `automan-cli.exe mcp` 握手、列工具 —— 通过。
 SDK 那串依赖让便携版多了约 11 MB 二进制（主要是 cryptography）。便携版没有带密钥跑真任务
 （执行走的就是客户端一直在用的 `automan-cli.exe run`）。
